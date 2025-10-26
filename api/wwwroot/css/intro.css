@@ -1,0 +1,141 @@
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    min-height: 820px;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    overflow: hidden; 
+}
+
+.intro:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.introInner {
+    width: 100%;
+    max-width: 880px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 3; 
+}
+
+.introTitle {
+    color: #ff00ff;
+    font-size: 150px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1;
+    text-shadow: 0 0 5px #9b4db3,
+                 0 0 10px #9b4db3,
+                 0 0 20px #9b4db3,
+                 0 0 40px #9b4db3;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-in-out forwards;
+    position: relative;
+    display: inline-block;
+    padding: 0 20px;
+    background: linear-gradient(15deg, #ffffff, #e6e6ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: brightness(1.2) contrast(1.2);
+    letter-spacing: 2px;
+}
+
+.introTitle:before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #4a396d, transparent);
+}
+
+.introTitle:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    margin: 60px auto;
+    background: linear-gradient(90deg, transparent, #c1aced, transparent);
+}
+
+.introSubtitle {
+    margin-bottom: 20px;
+
+    font-family: 'SF Pro Text', 'Regular';
+    font-size: 72px;
+    color: #fff;
+}
+
+/* Tablet devices */
+@media (max-width: 768px) {
+    .intro {
+        min-height: 600px;
+        background-position: center center;
+    }
+
+    .introTitle {
+        font-size: 100px;
+        text-shadow: 0 0 4px #9b4db3,
+                     0 0 8px #9b4db3,
+                     0 0 16px #9b4db3,
+                     0 0 32px #9b4db3;
+    }
+
+    .introTitle:after {
+        width: 40px;
+        height: 2px;
+        margin: 40px auto;
+    }
+
+    .introSubtitle {
+        font-size: 48px;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    .intro {
+        min-height: 500px;
+        background-position: center center;
+    }
+
+    .introTitle {
+        font-size: 60px;
+        text-shadow: 0 0 3px #9b4db3,
+                     0 0 6px #9b4db3,
+                     0 0 12px #9b4db3,
+                     0 0 24px #9b4db3;
+    }
+
+    .introTitle:after {
+        width: 30px;
+        height: 2px;
+        margin: 30px auto;
+    }
+
+    .introSubtitle {
+        font-size: 32px;
+    }
+}

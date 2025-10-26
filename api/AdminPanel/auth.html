@@ -1,0 +1,24 @@
+<!DOCTYPE html> 
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentication</title>
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/auth.css">
+</head>
+<body>
+    <div class="authenticationContainer">
+        <p class="titling">Вход</p>
+        <form class="authForm">
+            <input class="input"type="text" id="username" placeholder="Логин" required>
+            <input class="input" type="password" id="password" placeholder="Пароль" required>
+            <button class="loginBtn" type="submit">Войти</button>
+        </form>
+        <div class="errorMsg" style="color: red; display: none;">Неверные данные</div>
+    </div>
+    
+    <script src="/js/auth.js"></script>
+    <script src="/js/notification.js"></script>
+</body>
+</html>

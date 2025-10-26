@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/admin.css">
+    <title>Панель администрирования</title>
+</head>
+<body>    
+    <div class="page">
+        <!-- Header -->
+        <div class="adminHeader">
+            <h1>Панель администрирования</h1>
+        </div>
+
+        <!-- Model Selection -->
+        <div class="modelSelector">
+            <button class="modelButton active" data-model="image">Image Model</button>
+            <button class="modelButton" data-model="priceList">Price List Model</button>
+            <button class="modelButton" data-model="feedback">Feedback Requests</button>
+        </div>
+
+        <!-- Image Model Section -->
+        <section class="section" id="imageModelSection">
+            <div class="container">
+                <div class="sectionHeader">
+                    <h3 class="sectionSubtitle">Управление данными</h3>
+                    <h2 class="sectionTitle">Image model</h2>
+                </div>
+
+                <!-- Form for Image Model -->
+                <div class="formContainer">
+                    <h3 class="formTitle">Добавить/Редактировать запись</h3>
+                    <form id="imageModelForm" class="formContent">
+                        <input type="hidden" id="imageRecordId">
+                        <div class="formItem">
+                            <label for="imageData" class="formLabel">Изображение</label>
+                            <input type="file" id="imageData" accept="image/png,image/jpeg" class="formInput">
+                        </div>
+                        <div class="formItem">
+                            <label for="imageType" class="formLabel">Тип изображения</label>
+                            <input type="text" id="imageType" class="formInput">
+                        </div>
+                        <div class="formItem">
+                            <label for="name" class="formLabel">Название</label>
+                            <input type="text" id="name" class="formInput">
+                        </div>
+                        <div class="formItem">
+                            <label for="description" class="formLabel">Описание</label>
+                            <textarea id="description" rows="4" class="formInput"></textarea>
+                        </div>
+                        <div class="formItem">
+                            <label for="destination" class="formLabel">Назначение</label>
+                            <input type="text" id="destination" class="formInput">
+                        </div>
+                        <div class="formActions">
+                            <button type="submit" class="formButton">Сохранить</button>
+                            <button type="button" class="formButton clearBtn">Очистить</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Table for Image Model -->
+                <div class="tableContainer">
+                    <h3 class="tableTitle">Список записей</h3>
+                    <div class="tableScroll">
+                        <table class="tableContent">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Данные изображения</th>
+                                    <th>Тип</th>
+                                    <th>Название</th>
+                                    <th>Описание</th>
+                                    <th>Назначение</th>
+                                    <th>Действия</th>
+                                </tr>
+                            </thead>
+                            <tbody id="imageTableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Price List Model Section -->
+        <section class="section hidden" id="priceListSection">
+            <div class="container">
+                <div class="sectionHeader">
+                    <h3 class="sectionSubtitle">Управление данными</h3>
+                    <h2 class="sectionTitle">Price List Model</h2>
+                </div>
+
+                <!-- Form for Price List Model -->
+                <div class="formContainer">
+                    <h3 class="formTitle">Добавить/Редактировать запись</h3>
+                    <form id="priceListForm" class="formContent">
+                        <input type="hidden" id="priceListRecordId">
+                        <div class="formItem">
+                            <label for="title" class="formLabel">Название</label>
+                            <input type="text" id="title" class="formInput">
+                        </div>
+                        <div class="formItem">
+                            <label for="price" class="formLabel">Цена</label>
+                            <input type="number" id="price" class="formInput">
+                        </div>
+                        <div class="formActions">
+                            <button type="submit" class="formButton">Сохранить</button>
+                            <button type="button" class="formButton clearBtn">Очистить</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Table for Price List Model -->
+                <div class="tableContainer">
+                    <h3 class="tableTitle">Список записей</h3>
+                    <div class="tableScroll">
+                        <table class="tableContent">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Название</th>
+                                    <th>Цена</th>
+                                    <th>Действия</th>
+                                </tr>
+                            </thead>
+                            <tbody id="priceListTableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feedback Request Section -->
+        <section class="section hidden" id="feedbackSection">
+            <div class="container">
+                <div class="sectionHeader">
+                    <h3 class="sectionSubtitle">Управление данными</h3>
+                    <h2 class="sectionTitle">Feedback Requests</h2>
+                </div>
+
+                <!-- Table for Feedback Requests -->
+                <div class="tableContainer">
+                    <h3 class="tableTitle">Список запросов</h3>
+                    <div class="tableScroll">
+                        <table class="tableContent">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Имя</th>
+                                    <th>Email</th>
+                                    <th>Сообщение</th>
+                                    <th>Действия</th>
+                                </tr>
+                            </thead>
+                            <tbody id="feedbackTableBody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="/js/notification.js"></script>
+    <script src="/js/admin.js"></script>
+</body>
+</html>

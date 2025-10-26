@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    padding: 50px 0; 
+    font-family: 'Segoe UI', sans-serif;
+    background: #1a1a1d;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center; 
+    min-height: 100vh; 
+    color: #f0e9f6;
+}
+
+.authenticationContainer {
+    background: #2b2b30;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(155, 77, 179, 0.3);
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.titling {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d79fff;
+    margin-bottom: 10px;
+}
+
+.authForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.input {
+    padding: 10px 15px;
+    border: 1px solid rgba(155, 77, 179, 0.4);
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #1f1f23;
+    color: #f0e9f6;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 5px rgba(155, 77, 179, 0.1);
+}
+
+.input::placeholder {
+    color: #aaa1b6;
+}
+
+.input:focus {
+    border-color: #9b4db3;
+    box-shadow: 0 0 7px rgba(155, 77, 179, 0.3);
+}
+
+.loginBtn {
+    background-color: #9b4db3;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 0 5px rgba(155, 77, 179, 0.3);
+}
+
+.loginBtn:hover {
+    background-color: #822c9c;
+}
+
+.errorMsg {
+    font-size: 14px;
+    text-align: center;
+    color: #ff7070;
+}
+/* Tablet devices */
+@media (max-width: 768px) {
+    body {
+        padding: 30px 20px;
+        justify-content: center; /* Центрируем форму */
+    }
+
+    .authenticationContainer {
+        padding: 30px 25px;
+        max-width: 350px;
+    }
+
+    .titling {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .loginBtn {
+        padding: 10px 20px;
+        font-size: 14px;
+        width: 100%;
+    }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+    .authenticationContainer {
+        padding: 20px 15px;
+        max-width: 60%;
+        box-shadow: none;
+        border-radius: 10px;
+    }
+
+    .titling {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .input {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .loginBtn {
+        padding: 8px 16px;
+        font-size: 12px;
+        width: 100%;
+    }
+
+    .errorMsg {
+        font-size: 12px;
+    }
+}

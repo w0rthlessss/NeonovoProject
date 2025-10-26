@@ -1,0 +1,114 @@
+.priceListContainer {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.priceList {
+    background: rgba(26, 26, 26, 0.7);
+    border: 1px solid rgba(155, 77, 179, 0.4);
+    border-radius: 15px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(155, 77, 179, 0.2);
+    transition: all 0.3s ease;
+}
+
+.priceList:hover {
+    box-shadow: 0 0 25px rgba(155, 77, 179, 0.4);
+    border-color: rgba(155, 77, 179, 0.7);
+}
+
+.priceItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid rgba(155, 77, 179, 0.2);
+    transition: all 0.3s ease;
+}
+
+.priceItem:last-child {
+    border-bottom: none;
+}
+
+.priceItem:hover {
+    background: rgba(155, 77, 179, 0.1);
+}
+
+.priceSeparator {
+    height: 1px;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(155, 77, 179, 0.3) 50%, 
+        transparent 100%
+    );
+    margin: 20px 0;
+}
+
+.priceTitle {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.priceValue {
+    color: #9b4db3;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.priceNote {
+    color: #b3b3b3;
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    border-top: 1px solid rgba(155, 77, 179, 0.2);
+    line-height: 1.6;
+}
+
+/* Tablet Devices */
+@media (max-width: 768px) {
+    .priceListContainer {
+        margin: 30px auto;
+        padding: 15px;
+    }
+
+    .priceList {
+        padding: 20px;
+    }
+
+    .priceItem {
+        padding: 12px;
+    }
+
+    .priceTitle,
+    .priceValue {
+        font-size: 16px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    .priceListContainer {
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .priceList {
+        padding: 15px;
+    }
+
+    .priceItem {
+        padding: 10px;
+    }
+
+    .priceTitle,
+    .priceValue {
+        font-size: 14px;
+    }
+}

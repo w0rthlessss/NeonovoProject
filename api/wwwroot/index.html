@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/intro.css">
+    <link rel="stylesheet" href="css/header.css">   
+    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/solutions.css">
+    <link rel="stylesheet" href="css/pricelist.css">
+    
+    <title>НЕОНОВО</title> 
+</head>
+<body>
+
+    <header class="header" id="header">
+        <div class="container">
+            <div class="headerInner">
+                <a class="headerLogo" href="/auth">НЕОНОВО</a>
+
+                <nav class="navigation" id="navigation">
+                    <a class="navigationLink" href="#" data-scroll="#about">О нас</a>
+                    <a class="navigationLink" href="#" data-scroll="#why">Почему мы</a>
+                    <a class="navigationLink" href="#" data-scroll="#solutions">Наши проекты</a>
+                    <a class="navigationLink" href="#" data-scroll="#priceList">Прайс-лист</a>
+                    <a class="navigationLink" href="#" data-scroll="#contacts">Контакты</a>
+                    <div class="searchContainer">
+                        <button class="searchToggle" id="searchToggle">
+                            <img src="img/glass.png" alt="Search" class="searchIcon">
+                        </button>
+                        <div class="searchBar" id="searchBar">
+                            <input type="text" id="searchInput" placeholder="Поиск проектов...">
+                            <div class="searchResults" id="searchResults"></div>
+                        </div>
+                    </div>
+                </nav>
+                
+                <button class="navigationToggle" id="navigationToggle" type="button">
+                    <span class="navigationToggleItem"></span>
+                </button>                
+            </div>
+        </div>
+    </header>
+
+    <div class="page">
+        
+        <!--Intro part-->
+        <div class="intro" id="intro">
+            <div class="container">
+                <div class="introInner">
+                    <h1 class="introTitle">НЕОНОВО</h1>
+                </div>
+            </div>
+            
+            <div class="slider">
+                <div class="sliderInner"></div>
+                <div class="sliderProgress"></div>
+            </div>
+        </div>
+        <!--Intro part-->
+
+
+        <!--About us-->
+        <section class="section" id="about">
+            <div class="container">
+
+                <div class="sectionHeader">
+                    <h3 class="sectionSubtitle">Что мы делаем</h3>
+                    <h2 class="sectionTitle">Немного о нас</h2>
+                    <div class="sectionContent">
+                        <p>Томская компания по производству неоновых вывесок</p>
+                    </div>
+                </div>
+
+                <div class="cards">
+
+                    <div class="cardsItem" id="cardItem1"></div>
+                    <div class="cardsItem" id="cardItem2"></div>
+                    <div class="cardsItem" id="cardItem3"></div>
+
+                </div>
+                
+            </div>
+        </section>
+        <!--About us-->
+
+        <!--Why us-->
+        <section class="section" id="why">
+            <div class="container">
+
+                <div class="sectionHeader">
+                    <h2 class="sectionTitle">Почему мы</h2>
+                </div>
+
+                <div class="chatContainer">
+
+                    <div class="chatHeader">
+                        <span>—</span>
+                        <span>X</span>
+                    </div>
+
+                    <div class="chatBody">
+                        <div class="message left">Умное управление (Apple Homekit / Яндекс Умный дом)</div>
+                        <div class="message right">Создание макета</div>
+                        <div class="typingIndicator">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="message left">Качественные материалы</div>
+                        <div class="message right">Индивидуальный подход к каждому клиенту</div>
+                        <div class="typingIndicator">
+                            <span></span><span></span><span></span>
+                        </div>
+                        <div class="message left">Адаптивность под разную аудиторию</div>
+                        <div class="message right">🔥🔥🔥</div>    
+                        <div class="typingIndicator">
+                            <span></span><span></span><span></span>
+                        </div>                    
+                    </div>
+                
+                </div>
+            </div>
+        </section>
+        <!--Why us-->
+
+        <!--Solutions-->
+        <section class="section" id="solutions">
+            <div class="container">
+
+                <div class="sectionHeader">
+                    <h3 class="sectionSubtitle">Проекты, которые мы делали</h3>
+                    <h2 class="sectionTitle">Наши проекты</h2>
+                </div>
+
+                <div class="projectsGrid" id="projectsGrid"></div>
+                <div class="feedbackButtonContainer">
+                    <button class="feedbackFormOpen" id="feedbackFormOpen">Оставить заявку</button>
+                </div>                
+            </div>
+        </section>
+        <!--Solutions-->
+
+        <!--Price List-->
+        <section class="section" id="priceList">
+            <div class="container">
+                <div class="sectionHeader">
+                    <h3 class="sectionSubtitle">Наши услуги</h3>
+                    <h2 class="sectionTitle">Прайс-лист</h2>
+                </div>
+
+                <div class="priceListContainer">
+                    <div class="priceList"></div>
+                </div>
+            </div>
+        </section>
+        <!--Price List-->
+
+        <!--Modal-->
+        <div class="solutionsModal" id="solutionsModal">            
+            <div class="solutionsModalContent"></div>
+            <span class="closeModal">&times;</span>
+        </div>
+
+        <!--Feedback Modal-->
+        <div class="feedbackModal" id="feedbackModal">
+            <div class="feedbackModalContent">
+                <h3 class="feedbackTitle">Оставить заявку</h3>
+                <form id="feedbackForm" class="feedbackForm">
+                    <div class="formItem">
+                        <label for="feedbackName" class="formLabel">Ваше имя</label>
+                        <input type="text" id="feedbackName" class="formInput" required>
+                    </div>
+                    <div class="formItem">
+                        <label for="feedbackEmail" class="formLabel">Email</label>
+                        <input type="email" id="feedbackEmail" class="formInput" required>
+                    </div>
+                    <div class="formItem">
+                        <label for="feedbackMessage" class="formLabel">Сообщение</label>
+                        <textarea id="feedbackMessage" class="formInput" rows="4" required></textarea>
+                    </div>
+                    <div class="formActions">
+                        <button type="submit" class="formButton">Отправить</button>
+                        <button type="button" class="formButton closeFeedbackBtn">Отмена</button>
+                    </div>
+                </form>
+            </div>
+            <span class="closeModal">&times;</span>
+        </div>
+
+        <!--Contacts-->
+        <section class="section" id="contacts">
+            <div class="container">
+
+                <div class="sectionHeader">
+                    <h3 class="sectionSubtitle">Как с нами связаться?</h3>
+                    <h2 class="sectionTitle">Контакты</h2>
+                    <div class="sectionContent">
+                        <p>Для оформления заказа, вы можете связаться с нами в нашей группе в VK или по телефону, а также можете оставить заявку через форму обратной связи.</p>
+                    </div>
+                </div>
+
+                <div class="contactsContainer">
+                    <div class="contactsItem">
+                        <div class="contactsIcon" id="vk"></div>
+                        <a href="https://vk.com/neonovvo" target="_blank">Наша группа в VK</a>
+                    </div>
+                    <div class="contactsItem">
+                        <div class="contactsIcon" id="phone"></div>
+                        <a href="tel:79059929891">+7 (905) 992-98-91</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!--Contacts-->
+
+        
+    </div>
+    <footer class="footer" id="footer">
+        <div class="container">
+
+            <div class="footerInner">
+                <h2 class="footerTitle">НЕОНОВО</h2>
+                <h3 class="footerSubtitle">С нетерпением ждем работы над новыми проектами!</h3>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="js/notification.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/intro.js"></script>
+    <script src="js/about.js"></script>
+    <script src="js/solutions.js"></script>
+    <script src="js/feedback.js"></script>
+    <script src="js/pricelist.js"></script>
+    <script src="js/search.js"></script>
+</body>
+</html>
